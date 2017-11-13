@@ -1,0 +1,9 @@
+target/
+.idea
+*.iml
+.project
+.classpath
+.settings/
+bin/
+.DS_Store
+twitter4j.properties
