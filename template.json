@@ -1,0 +1,50 @@
+  {
+    "template" : "tweets",
+    "order" : 10,
+    "mappings" : {
+        "tweet" : {
+          "_source" : {
+            "includes" : [ "*" ]
+          },
+          "properties" : {
+               "text" : {
+                  "type" : "text",
+                  "fielddata": true
+                },
+                "date" : {
+                  "type" : "date"
+                },
+                "location" : {
+                  "type" : "geo_point"
+                },
+                "hashtags" : {
+                  "type" : "keyword"
+                },
+                "usernames" : {
+                  "type" : "keyword"
+                },
+                "user" : {
+                  "type" : "keyword"
+                },
+                "sentiment" : {
+                  "type" : "keyword"
+                },
+                "sentimentScore" : {
+                  "type" : "long"
+                },
+                "userFollowersCount" : {
+                  "type" : "long"
+                },
+                "userStatusesCount" : {
+                  "type" : "long"
+                }
+            }
+          }
+        },
+        "_default_" : {
+            "_source" : {
+                "includes" : ["*"]
+            }
+        }
+    }
+}
